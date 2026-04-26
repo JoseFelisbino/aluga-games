@@ -7,7 +7,7 @@ function alterarStatus(id) {
         imagem.classList.remove("dashboard__item__img--rented");
         botao.classList.remove("dashboard__item__button--return");
         botao.textContent = "Alugar";
-    } else {
+    } else if (confirm("Deseja realmente alugar este game?")) {
         imagem.classList.add("dashboard__item__img--rented");
         botao.textContent = "Devolver";
         botao.classList.add("dashboard__item__button--return");
